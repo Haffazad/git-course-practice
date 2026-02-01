@@ -1,0 +1,5 @@
+1.0     Accept data from the user.
+2.0     Input data from in the database
+3.0     Process the data using java and sql
+4.0     Send the processed data to the client
+5.0     client is happy.
