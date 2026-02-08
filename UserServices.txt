@@ -3,3 +3,7 @@
 3.0     Process the data using java and sql
 4.0     Send the processed data to the client
 5.0     client is happy.
+
+6.0     Create a new feature which will include the use of avatar
+7.0     This should be committed to a new brach called hafizfeature
+8.0     The essence of this new feature is to have atleast a profile picture on user account.
