@@ -64,42 +64,39 @@ public class Demo {
         System.out.println("String x equals String y is: " + x.equals(y));
     }
 
-    public static void weeklyAppointments() {
+    public static String weeklyAppointments() {
 
         System.out.println("Which day of the week is it?");
         try (Scanner scan = new Scanner(System.in)) {
             String day = scan.nextLine().toLowerCase().trim();
+            String outcome = " ";
             switch (day) {
-                case "monday", "wednesday", "friday": {
+                case "monday", "wednesday", "friday" -> {
                     if (day.equals("monday")) {
-                        System.out.println("Appointment with Mr.Romeo at 04:00 PM");
+                        outcome = "Appointment with Mr.Romeo at 04:00 PM";
                     } else if (day.equals("wednesday")) {
-                        System.out.println("No Lesson Appointment Today!");
+                        outcome = "No Lesson Appointment Today!";
                     } else
-                        System.out
-                                .println(
-                                        "Appointment with Mr.Romeo and Miss Popoola at 04:00 PM and 6:00 PM respectively");
+                        outcome = "Appointment with Mr.Romeo and Miss Popoola at 04:00 PM and 6:00 PM respectively";
                 }
-                    break;
-                case "tuesday", "thursday", "saturday": {
+
+                case "tuesday", "thursday", "saturday" -> {
                     if (day.equals("tuesday")) {
-                        System.out.println("Appointment with Miss Ajalaruru at 06:00 PM");
+                        outcome = "Appointment with Miss Ajalaruru at 06:00 PM";
                     } else if (day.equals("thursday")) {
-                        System.out.println("Appointment with Miss Ajalaruru at 06:00 PM");
+                        outcome = "Appointment with Miss Ajalaruru at 06:00 PM";
                     } else
-                        System.out.println(
-                                "Appointment with Mr.Romeo and Mr. Thompson at 12:00 PM and 02:00 PM respectively");
+                        outcome = "Appointment with Mr.Romeo and Mr. Thompson at 12:00 PM and 02:00 PM respectively";
                 }
-                    break;
-                case "sunday":
-                    System.out.println("Appointment with Mr Aghaulor at 03:00 PM");
-                    break;
-                default: {
+
+                case "sunday" -> outcome = "Appointment with Mr Aghaulor at 03:00 PM";
+
+                default -> {
                     System.out.println("Enter a valid day of the week. No punctuation marks is needed.");
                     weeklyAppointments();
                 }
-                    break;
             }
+            return outcome;
         }
     }
 
@@ -107,6 +104,7 @@ public class Demo {
 
         // reverseString();
         // showString();
-        weeklyAppointments();
+        String appointment = weeklyAppointments();
+        System.out.println(appointment);
     }
 }
