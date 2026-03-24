@@ -64,7 +64,7 @@ public class Demo {
         System.out.println("String x equals String y is: " + x.equals(y));
     }
 
-    public static void switchCases() {
+    public static void weeklyAppointments() {
 
         System.out.println("Which day of the week is it?");
         try (Scanner scan = new Scanner(System.in)) {
@@ -96,7 +96,7 @@ public class Demo {
                     break;
                 default: {
                     System.out.println("Enter a valid day of the week. No punctuation marks is needed.");
-                    switchCases();
+                    weeklyAppointments();
                 }
                     break;
             }
@@ -107,6 +107,6 @@ public class Demo {
 
         // reverseString();
         // showString();
-        switchCases();
+        weeklyAppointments();
     }
 }
