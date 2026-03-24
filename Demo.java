@@ -64,9 +64,49 @@ public class Demo {
         System.out.println("String x equals String y is: " + x.equals(y));
     }
 
+    public static void switchCases() {
+
+        System.out.println("Which day of the week is it?");
+        try (Scanner scan = new Scanner(System.in)) {
+            String day = scan.nextLine().toLowerCase().trim();
+            switch (day) {
+                case "monday", "wednesday", "friday": {
+                    if (day.equals("monday")) {
+                        System.out.println("Appointment with Mr.Romeo at 04:00 PM");
+                    } else if (day.equals("wednesday")) {
+                        System.out.println("No Lesson Appointment Today!");
+                    } else
+                        System.out
+                                .println(
+                                        "Appointment with Mr.Romeo and Miss Popoola at 04:00 PM and 6:00 PM respectively");
+                }
+                    break;
+                case "tuesday", "thursday", "saturday": {
+                    if (day.equals("tuesday")) {
+                        System.out.println("Appointment with Miss Ajalaruru at 06:00 PM");
+                    } else if (day.equals("thursday")) {
+                        System.out.println("Appointment with Miss Ajalaruru at 06:00 PM");
+                    } else
+                        System.out.println(
+                                "Appointment with Mr.Romeo and Mr. Thompson at 12:00 PM and 02:00 PM respectively");
+                }
+                    break;
+                case "sunday":
+                    System.out.println("Appointment with Mr Aghaulor at 03:00 PM");
+                    break;
+                default: {
+                    System.out.println("Enter a valid day of the week. No punctuation marks is needed.");
+                    switchCases();
+                }
+                    break;
+            }
+        }
+    }
+
     public static void main(String[] args) {
 
-        reverseString();
-        showString();
+        // reverseString();
+        // showString();
+        switchCases();
     }
 }
