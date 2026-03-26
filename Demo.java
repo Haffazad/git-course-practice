@@ -64,6 +64,23 @@ public class Demo {
         System.out.println("String x equals String y is: " + x.equals(y));
     }
 
+    public static void slidingWindowSum() {
+        int[] arr = { 6, 8, 11, 15, 20, 23, 12 };
+
+        int start = 0;
+        int end = arr.length;
+
+        while (start < end) {
+
+            for (int k = 0; k < (end - 2); k++) {
+                int sum = (arr[k] + arr[k + 1] + arr[k + 2]);
+                System.out.println("Sum of consecutive three elements in the given array = " + sum);
+            }
+            start = end;
+        }
+
+    }
+
     public static String weeklyAppointments() {
 
         System.out.println("Which day of the week is it?");
@@ -104,7 +121,8 @@ public class Demo {
 
         // reverseString();
         // showString();
-        String appointment = weeklyAppointments();
-        System.out.println(appointment);
+        // String appointment = weeklyAppointments();
+        // System.out.println(appointment);
+        slidingWindowSum();
     }
 }
